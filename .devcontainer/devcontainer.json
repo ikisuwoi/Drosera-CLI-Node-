@@ -1,8 +1,11 @@
 {
-  "name": "Drosera Dev",
-  "image": "mcr.microsoft.com/devcontainers/base:ubuntu:22.04",
-  "features": {
-    "ghcr.io/devcontainers/features/docker-in-docker:1": {}
-  },
-  "postCreateCommand": "sudo apt update && sudo apt install -y libssl3 curl"
+  "name": "Node.js & TypeScript",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:18",
+  "features": {},
+  "postCreateCommand": "npm install",
+  "customizations": {
+    "vscode": {
+      "extensions": ["dbaeumer.vscode-eslint", "esbenp.prettier-vscode"]
+    }
+  }
 }
